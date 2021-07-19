@@ -1,0 +1,23 @@
+{
+    "ip": "85.130.84.15",
+    "location": {
+      "country": "BG",
+      "region": "Haskovo",
+      "city": "Dimitrovgrad",
+      "lat": 42.05,
+      "lng": 25.6,
+      "postalCode": "6400",
+      "timezone": "+03:00",
+      "geonameId": 732263
+    },
+    "as": {
+      "asn": 8717,
+      "name": "A1 BG EAD",
+      "route": "85.130.80.0/21",
+      "domain": "https://www.a1.bg",
+      "type": "NSP"
+    },
+    "isp": "A1 Bulgaria EAD",
+    "proxy": { "proxy": false, "vpn": false, "tor": false }
+  }
+  

@@ -1,43 +1,34 @@
 import "./index.css";
 import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css"; // this was missing
+import "leaflet/dist/leaflet.css";
+import jsonData from "./Data.json";
 ///////////////
-import L from "leaflet";
-L.Icon.Default.imagePath = "leaflet_images/";
-///////////////
-///////////////
-
-const { REACT_APP_GEOLOCATION_IP_API_KEY } = process.env;
-console.log(REACT_APP_GEOLOCATION_IP_API_KEY);
+// marker
+// netlify
 export default function App() {
   //
   const [data, setData] = useState();
   const [country, setCountry] = useState();
-  //
+  // useEffect useEffect useEffect useEffect
   useEffect(() => {
-    fetch(
-      `https://geo.ipify.org/api/v1?apiKey=${REACT_APP_GEOLOCATION_IP_API_KEY}`
-    )
-      .then((res) => res.json())
-      .then((data) => setData(data))
-      .catch((err) => console.log("data erros is:", err));
+    setData(jsonData);
   }, []);
-  console.log("this is the data", data);
-
+  /////////////////
   useEffect(() => {
-    fetch(`https://restcountries.eu/rest/v2/alpha/${data.location.country}`)
-      .then((res) => res.json())
-      .then((country) => setCountry(country))
-      .catch((err) => console.log("country erros is:", err));
+    if (data) {
+      fetch(`https://restcountries.eu/rest/v2/alpha/${data.location.country}`)
+        .then((ress) => ress.json())
+        .then((country) => setCountry(country))
+        .catch((err) => console.log("country error is:", err));
+    }
   }, [data]);
-
   //
   console.log("this is the country", country);
-  // return
+  // return  return  return  return  return  return
   return (
     <div className="App">
-      {data ? (
+      {data && country ? (
         <>
           <div className="details">
             <span>
@@ -82,7 +73,7 @@ export default function App() {
             style={{ height: "80vh", width: "100%" }}
             center={[data.location.lat, data.location.lng]}
             zoom={13}
-            scrollWheelZoom={false}
+            scrollWheelZoom={true}
           >
             <TileLayer
               attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
