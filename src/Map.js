@@ -18,30 +18,31 @@ export default function Map(data) {
         {data ? (
           <Row>
             <Col sm>
-              Region:
-              <br />
-              {data.data.region_name},
-              <br />
-              {data.data.region_code}
+              <p>Region:</p>
+              <p>{data.data.region_name},</p>
+              <p>{data.data.region_code}</p>
             </Col>
             <Col sm>
-              Country: <br /> {data.data.country_name},
-              <br />
-              {data.data.country_code}
+              <p>Country:</p>
+              <p>{data.data.country_name},</p>
+              <p> {data.data.country_code}</p>
             </Col>
             <Col sm>
-              City: <br /> {data.data.city},
-              <br />
-              {data.data.zip_code}
+              <p>City:</p>
+              <p>{data.data.city},</p>
+              <p> {data.data.zip_code}</p>
             </Col>
             <Col sm>
-              lat: <br /> {data.data.latitude}
+              <p> latitude:</p>
+              <p> {data.data.latitude}</p>
             </Col>
             <Col sm>
-              lng: <br /> {data.data.longitude}
+              <p>longitude:</p>
+              <p>{data.data.longitude}</p>
             </Col>
             <Col sm>
-              Timezone: <br /> {data.data.time_zone}
+              <p> Timezone: </p>
+              <p> {data.data.time_zone}</p>
             </Col>
           </Row>
         ) : (

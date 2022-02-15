@@ -11,18 +11,18 @@ export default function App() {
   //
   const [data, setData] = useState();
   //
+  const getData = async () => {
+    try {
+      const response = await axios.get(
+        "https://api.freegeoip.app/json/?apikey=0fbbc510-8e75-11ec-afd4-a744afa5e18c"
+      );
+      const result = response.data;
+      setData(result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axios.get(
-          "https://api.freegeoip.app/json/?apikey=0fbbc510-8e75-11ec-afd4-a744afa5e18c"
-        );
-        const result = response.data;
-        setData(result);
-      } catch (error) {
-        console.log(error);
-      }
-    };
     getData();
   }, []);
   // return  return  return  return  return  return
