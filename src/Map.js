@@ -10,7 +10,6 @@ export default function Map(data) {
       "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png",
     iconSize: [22, 41],
   });
-  console.log(data.data);
   // return  return  return  return  return  return
   return (
     <div>
