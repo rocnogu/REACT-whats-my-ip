@@ -25,7 +25,7 @@ export default function App() {
   useEffect(() => {
     getData();
   }, []);
-  console.log(`app data: ${data}`);
+  console.log(data);
   // return  return  return  return  return  return
   return (
     <div className="App">
