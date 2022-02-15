@@ -33,6 +33,9 @@ export default function App() {
       <Header />
       <Container>
         <div>{data ? <Bootsrap data={data} /> : "loading..."}</div>
+        <div>
+          <Bootsrap data={data} />
+        </div>
       </Container>
       <Footer />
     </div>
