@@ -1,8 +1,4 @@
- 
-
-
-
- # What it contains
+# What it contains
 
 REACT-whats-my-ip-location App
 
@@ -14,24 +10,30 @@ Go Into the project directory and run
 
 to install dependencies
 
-* and
+- and
 
 #### `npm start`
 
 to run local server
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ### To run React app on new port
 
 #### `export PORT=8000`
- in the console
 
-* or
+in the console
 
-####  ` "start": "set PORT=8000 && react-scripts start" `  
+- or
+
+#### `"start": "set PORT=8000 && react-scripts start"`
+
 in package.json
+
+for netlify deploy
+
+CI=false npm run build

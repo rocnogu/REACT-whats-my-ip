@@ -2,8 +2,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-//
-export default function Bootsrap(data) {
+///////////////
+export default function Map(data) {
   //
   const markerIcon = new L.Icon({
     iconUrl:
@@ -11,6 +11,7 @@ export default function Bootsrap(data) {
     iconSize: [22, 41],
   });
   console.log(data.data);
+  // return  return  return  return  return  return
   return (
     <div>
       <div>
@@ -44,7 +45,7 @@ export default function Bootsrap(data) {
             </Col>
           </Row>
         ) : (
-          "loading..."
+          "loading Map..."
         )}
       </div>
       <br />

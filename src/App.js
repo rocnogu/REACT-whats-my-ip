@@ -2,7 +2,7 @@ import "leaflet/dist/leaflet.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Container from "react-bootstrap/Container";
-import Bootsrap from "./Bootsrap";
+import Map from "./Map";
 //
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -11,7 +11,6 @@ export default function App() {
   //
   const [data, setData] = useState();
   //
-
   useEffect(() => {
     const getData = async () => {
       try {
@@ -26,19 +25,14 @@ export default function App() {
     };
     getData();
   }, []);
-
   // return  return  return  return  return  return
   return (
     <div className="App">
       <Header />
       <Container>
-        <div>{data ? <Bootsrap data={data} /> : "loading..."}</div>
-        <div>
-          <Bootsrap data={data} />
-        </div>
+        <div>{data ? <Map data={data} /> : "loading..."}</div>
       </Container>
       <Footer />
     </div>
   );
 }
-// <div>{data  ? <Bootsrap data={data} /> : "loading..."}</div>
